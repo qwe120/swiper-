@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="swiper4/swiper-4.3.5.min.js"></script>
+    <link rel="stylesheet" href="swiper4/swiper-4.3.5.min.css">
+    <link rel="stylesheet" href="css/font/iconfont.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <span class="iconfont icon-return"></span>
+            <span>无连接</span>
+            <span class="iconfont icon-other"></span>
+        </header>
+        <section>
+            <div class="nav">
+                <li><span class="iconfont icon-time"></span><b>电源</b></li>
+                <li><span class="iconfont icon-shouye"></span><b>首页</b></li>
+                <li><span class="iconfont icon-stealth"></span></span><b>菜单</b></li>
+                <li><span class="iconfont icon-shielding"></span><b>截屏</b></li>
+            </div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        A
+                    </div>
+                    <div class="swiper-slide">
+                        B
+                    </div>
+                    <div class="swiper-slide">
+                        C
+                    </div>
+                    <div class="swiper-slide">
+                        D
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="stringify">
+                <span class="iconfont icon-manage"></span>
+                <i class="iconfont icon-undo"></i>
+            </div>
+        </footer>
+    </div>
+    <script>
+        var nav = document.querySelector('.nav');
+        var li = nav.querySelectorAll('li');
+        var mySwiper = new Swiper('.swiper-container', {
+            //  slideToClickedSlide: true,
+            on: {
+
+            }
+        });
+        var timer = null;
+        mySwiper.slideTo(0,200,false);
+       
+        for (var i=0; i<li.length; i++) {
+            // li[i].children[0].classList.remove('active');
+                (function(i) {
+                    li[i].onclick = function () {
+                    // this.children[0].classList.add('active');
+                    mySwiper.slideTo(i,200,false);
+                     }
+                })(i);
+                
+           
+        }
+        
+    </script>
+</body>
+</html>

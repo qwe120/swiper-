@@ -1,0 +1,121 @@
+@import "common.scss";
+@import "_mixin.scss";
+$width:100%;
+$height:100%;
+.wrapper {
+    width: $width;
+    height: $height;
+    color: #333333;
+    @include box_flex;
+    @include direction(column);
+    padding: 0 pxTorem(15px);
+    @include sizing;
+    font-size: pxTorem(12px);
+    overflow: hidden;
+}
+
+header {
+    width: $width;
+    height: pxTorem(44px);
+    @include box_flex;
+    color: #333333;
+    font-size: pxTorem(16px);
+    @include justify(space-between);
+    @include align;
+
+}
+
+
+section {
+    width: $width;
+    @include box_flex;
+    @include flex;
+    @include direction(column);
+}
+section .nav{
+    width: $width;
+    height: pxTorem(80px);
+    @include box_flex;
+}
+.active{
+    color: palevioletred;
+}
+section .nav{
+    li{
+        width: pxTorem(50px);
+        height: pxTorem(80px);
+        list-style: none;
+        margin-right: pxTorem(20px);
+    }
+    span {
+        display: inline-block;
+        width: pxTorem(50px);
+        height: pxTorem(50px);
+        border-radius: 50%;
+        box-shadow: 0 2px 2px 2px #ccc;
+        text-align: center;
+        line-height: pxTorem(50px);
+        font-size: pxTorem(12px);
+        padding: 0 pxTorem(5px);
+        
+        @include sizing;
+        &:hover {
+            color: palevioletred;
+        }
+        
+    }
+    b{
+        width: pxTorem(50px);
+        height: pxTorem(30px);
+        display: inline-block;
+        line-height: pxTorem(30px);
+        text-align: center;
+    }
+}
+.swiper-container{
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    width: 90%;
+    @include flex;
+    font-size: pxTorem(14px);
+    overflow: hidden;
+}
+
+footer{
+    @include box_flex;
+    @include justify;
+    @include align;
+    width: 100%;
+    height: pxTorem(80px);
+}
+.iconfont{
+    font-size: pxTorem(26px)!important;
+}
+
+footer{
+    span {
+        display: inline-block;
+        width: pxTorem(40px);
+        height: pxTorem(40px);
+        border-radius: 50%;
+        box-shadow: 0 2px 2px 2px #ccc;
+        text-align: center;
+        line-height: pxTorem(40px);
+        font-size: pxTorem(12px);
+        padding: 0 pxTorem(5px);
+        @include sizing;
+    }
+    i{
+        display: inline-block;
+        width: pxTorem(150px);
+        height: pxTorem(40px);
+        border-radius: pxTorem(40px);
+        box-shadow: 0 2px 2px 2px #ccc;
+        text-align: center;
+        line-height: pxTorem(40px);
+        font-size: pxTorem(12px);
+        padding: 0 pxTorem(5px);
+        @include sizing;
+        margin-left: pxTorem(10px);
+    }
+}
